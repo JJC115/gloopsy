@@ -1,0 +1,62 @@
+/* Matches the app: peach-to-lavender sky, deep purple ink, rounded type.
+   No web fonts or outside requests, consistent with the "collects no data" promise. */
+:root {
+  --ink: #382a54;
+  --ink-soft: #6b5d86;
+  --sky-top: #ffe0cc;
+  --sky-bottom: #d1c9ff;
+  --card: #ffffff;
+  --accent: #a86bff;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--sky-bottom); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(var(--sky-top), var(--sky-bottom)) fixed;
+  color: var(--ink);
+  font: 17px/1.55 ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+header { text-align: center; margin-bottom: 28px; }
+header img { border-radius: 22%; box-shadow: 0 8px 24px rgba(56, 42, 84, 0.18); }
+header.small img { border-radius: 22%; }
+h1 { font-size: 2.4rem; font-weight: 900; margin: 12px 0 0; letter-spacing: -0.01em; }
+.tagline { margin: 4px 0 0; color: var(--ink-soft); font-weight: 700; }
+
+section {
+  background: var(--card);
+  border-radius: 24px;
+  padding: 20px 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(56, 42, 84, 0.08);
+}
+
+h2 { font-size: 1.25rem; font-weight: 800; margin: 0 0 10px; }
+section h2:not(:first-child) { margin-top: 22px; }
+section p { margin: 0 0 10px; }
+section p:last-child { margin-bottom: 0; }
+
+ul { margin: 0; padding-left: 1.2em; }
+li { margin-bottom: 8px; }
+li:last-child { margin-bottom: 0; }
+
+details { border-top: 1px solid rgba(56, 42, 84, 0.1); padding: 12px 0; }
+details:last-of-type { padding-bottom: 0; }
+summary { cursor: pointer; font-weight: 700; }
+details p { margin: 8px 0 0; color: var(--ink-soft); }
+
+a { color: var(--accent); font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 2px; overflow-wrap: anywhere; }
+
+footer { text-align: center; color: var(--ink-soft); font-size: 0.9rem; margin-top: 24px; }
+footer p { margin: 4px 0; }
